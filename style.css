@@ -1,0 +1,183 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero{
+  height: 100vh;
+  width: 100%;
+  background: url(./images/sky.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+.highway{
+  height: 200px;
+  width: 500%;
+  display: block;
+  background-image: url(./images/road.jpg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  animation: highway 5s linear infinite;
+}
+
+@keyframes highway 
+{
+    100%{
+      transform: translateX(-3400px);
+    }
+}
+
+
+/* city */
+
+.city{
+  height: 250px;
+  width: 500%;
+  background-image: url(./images/city.png);
+  position: absolute;
+  bottom: 200px;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 1;
+  /* this will repeat the image on the x axis  */
+  background-repeat: repeat-x;
+  animation: city 20s linear infinite;
+}
+
+
+@keyframes city
+{
+    100%{
+      transform: translateX(-1400px);
+    }
+}
+
+
+
+/* car  */
+.car{
+  width: 400px;
+  left: 50%;
+  bottom: 100px;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 2;
+}
+
+.car img{
+  width: 100%;
+  animation: car 1s linear infinite;
+}
+
+
+@keyframes car{
+  100%{
+    transform: translateY(-3px);
+  }
+  50%{
+    transform: translateY(1px);
+  }
+  0%{
+    transform: translateY(-3px);
+  }
+}
+
+
+/* wheels  */
+.wheel{
+  left: 50%;
+  bottom: 178px;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 2;
+}
+
+.wheel img{
+  width: 72px;
+  height: 72px;
+  animation: wheel 1s linear infinite;
+}
+
+.back_wheel{
+  left: -165px;
+  position: absolute;
+}
+
+.front_wheel{
+  left: 80px;
+  position: absolute;
+}
+
+
+@keyframes wheel {
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ////// */
+
+
+
+
+#character{
+    
+}
+
+
+#block{
+  width: 100px;
+  height: 50px;
+  background-color: black;
+  border-radius: 15px;
+  position: relative;
+  top: 990px;
+  z-index: 1;
+  right: 0;
+  animation:  block 3s infinite linear;
+}
+
+
+
+ /* this will make the blue div to move from the right to the left */
+@keyframes block{
+  0%{left: 3400px;}
+  100%{left: -1500px;}
+}
+
+
+@keyframes died{
+  0%{top: 0px;} 
+  100%{bottom: -150px;}
+}
+
+.animate{
+  animation: jump 500ms;
+  transform: rotate(-40deg);
+}
+
+/* this will make the red div to jump */
+@keyframes jump{
+  0%{top: 10px;};
+  100%{top:10px;}
+}
+
+
+.animate-died{
+  animation: died 10s infinite;
+  transform: rotate(180deg);
+}
+
+
+
+
