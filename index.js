@@ -19,7 +19,7 @@ function trackMyScore(){
 
   // lets see where the moto div touch the rock
   if(blockleft<15000 && blockleft>0 && characterTop>=130){ // the 50 and 0 coming from the motocycle div, cause it has a width of 50px11
-    alert("touvj");
+    // alert("touvj");
     clearInterval(setTime)
   }
 };
