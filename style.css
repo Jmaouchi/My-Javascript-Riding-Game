@@ -15,18 +15,6 @@
 }
 
 
-.buttons{
-  position: relative;
-  background-color: red;
-}
-
-button{
-  position: absolute;
-  background-color: red;
-  padding: 15px;
-  margin-top: 75px;
-}
-
 .highway{
   height: 200px;
   width: 500%;
@@ -76,20 +64,9 @@ button{
 
 
 /* car  */
-/* .car{
+.car{
   width: 240px;
   left: 50%;
-  bottom: 100px;
-  transform: translateX(-50%);
-  position: absolute;
-  z-index: 2;
-} */
-
-#character{
-  position: relative;
-  width: 240px;
-  left: 10%;
-  top: 690px;
   bottom: 100px;
   transform: translateX(-50%);
   position: absolute;
@@ -117,7 +94,7 @@ button{
 
 /* wheels  */
 .wheel{
-  left: 10%;
+  left: 50%;
   bottom: 150px;
   transform: translateX(-50%);
   position: absolute;
@@ -152,13 +129,19 @@ button{
 
 
 
+
+#character{
+    
+}
+
+
 #block{
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 50px;
   background-color: black;
   border-radius: 15px;
   position: relative;
-  top: 720px;
+  top: 990px;
   z-index: 1;
   right: 0;
   animation:  block 3s infinite linear;
@@ -168,8 +151,8 @@ button{
 
  /* this will make the blue div to move from the right to the left */
 @keyframes block{
-  0%{left:2400px;}
-  100%{left: -700px;}
+  0%{left: 3400px;}
+  100%{left: -1500px;}
 }
 
 
@@ -179,25 +162,15 @@ button{
 }
 
 .animate{
-  margin-top: 80px;
-  background-color: red;
-}
-
-.backWheelAnimation{
-  /* animation: down 50000000ms; */
-  margin-top: 70px;
-}
-
-.frontWheelAnimation{
-  /* animation: down 50000ms; */
-  margin-top: 70px;
+  animation: jump 500ms;
+  transform: rotate(-40deg);
 }
 
 /* this will make the red div to jump */
 @keyframes jump{
-  0%{height: 30px;};
-  /* 50%{height: 10vh;} */
-  100%{height:100vh;}
+  0%{top: 10px;};
+  50%{left: 50px;}
+  100%{top:10px;}
 }
 
 
@@ -207,13 +180,13 @@ button{
 }
 
 
+<<<<<<< HEAD
 .animateUp{
   margin-top: -50px;
   background-color: red;
 }
 
+=======
+>>>>>>> parent of 8b0b814 ( javascript and css update to be able to jump up and down)
 
-.backWheelAnimationUp, .frontWheelAnimationUp{
-  margin-top: -70px;
-}
 
